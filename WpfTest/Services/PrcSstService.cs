@@ -10,8 +10,8 @@ namespace WpfTest.Services
 {
 	public class PrcSstService : IPrcSstService
 	{
-		private const string XML_PATH = ".\\TestXML.xml";
-		private static readonly ILog logger = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType);
+		private const string XML_PATH = ".\\Resources\\TestXML.xml";
+		private static readonly ILog Logger = LogManager.GetLogger(MethodBase.GetCurrentMethod()?.DeclaringType);
 
 		public async Task<PrcSst> LoadPrcSstXml()
 		{
@@ -26,7 +26,7 @@ namespace WpfTest.Services
 				}
 				catch (Exception exception)
 				{
-					logger.Error("Failed trying to read PrcSst", exception);
+					Logger.Error("Failed trying to read PrcSst", exception);
 					return null;
 				}
 			});
