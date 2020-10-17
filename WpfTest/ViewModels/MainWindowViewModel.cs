@@ -38,8 +38,11 @@ namespace WpfTest.ViewModels
 
 		private async Task CommandLoadXmlExecute()
 		{
-			var element = await elementService.LoadPrcSstXml();
-			PrcSst.Add(element);
+			var prcSst = await elementService.LoadPrcSstXml();
+			if (prcSst != null)
+			{
+				PrcSst.Add(prcSst);
+			}
 		}
 
 		private bool CommandLoadXmlCanExecute()

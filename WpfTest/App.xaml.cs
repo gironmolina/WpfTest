@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using log4net.Core;
+using log4net.Repository.Hierarchy;
 using Prism.Ioc;
 using Prism.Unity;
 using WpfTest.Services;
